@@ -54,7 +54,7 @@ void loop() {
         JsonObject &root = buf.createObject();
         root["type"] = "DHT";
         root["deviceId"] = "ESP8266";
-        //root["ts"] = epochTime;
+        root["ts"] = epochTime;
         root["temperature"] = temperature;
         root["humidity"] = humidity;
         root.printTo(payload, sizeof(payload));
